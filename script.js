@@ -112,6 +112,81 @@ window.addEventListener("load", () => {
     
     btnRoll.addEventListener('click', rollDice)
 
+    let btnHold = document.getElementById('btn-hold')
+    
+    const hold = () => {
+        if (player1Text.style.textDecoration == "underline red" 
+            && counterDice !== 1 
+            && counterDice !== 0
+            && diceScore.innerHTML !== iconQuestion) {
+                
+            counterGlobalPlayer1 += counterRoundPlayer1
+            globalScorePlayer1.textContent = counterGlobalPlayer1   
+            // Changement de joueur
+            changeToPlayer2()
+            
+        } else if (player2Text.style.textDecoration == "underline red" 
+                    && counterDice !== 1 
+                    && counterDice !== 0
+                    && diceScore.innerHTML !== iconQuestion) {
+                        
+            counterGlobalPlayer2 += counterRoundPlayer2
+            globalScorePlayer2.textContent = counterGlobalPlayer2
+            // Changement de joueur
+            changeToPlayer1()
+        }
+        
+        if (counterDice !== 1 && counterDice !== 0) {
+            // Réinitialisation des compteurs
+            counterRoundPlayer1 = 0
+            counterRoundPlayer2 = 0
+            roundScorePlayer1.textContent = 0
+            roundScorePlayer2.textContent = 0
+            diceScore.innerHTML = (`<img 
+                                        class="img-fluid me-0 diceAnimation" 
+                                        style="opacity: 0.5" 
+                                        src="./images/question-square.svg"
+                                        width="100" alt="Question square icon">`)
+        }
+        
+        // Fin de la partie et désignation du vainqueur
+        if (counterGlobalPlayer1 >= 100 ) {
+            changeToPlayer1()
+            textRoll.style.display = "none"
+            btnRoll.style.display = "none"
+            textHold.style.display = "none"
+            btnHold.style.display = "none"
+            diceScore.style.fontSize = '35px'
+            diceScore.style.color = 'lightgreen'
+            diceScore.style.fontWeight = "bold"
+            // diceScore.style.opacity = "0.6"
+            diceScore.textContent = "WINNER: PLAYER 1"
+        } else if (counterGlobalPlayer2 >= 100) {
+            changeToPlayer2()
+            textRoll.style.display = "none"
+            btnRoll.style.display = "none"
+            textHold.style.display = "none"
+            btnHold.style.display = "none"
+            diceScore.style.fontSize = '35px'
+            diceScore.style.color = 'lightgreen'
+            diceScore.style.fontWeight = "bold"
+            // diceScore.style.opacity = "0.6"
+            diceScore.textContent = "WINNER: PLAYER 2"
+        }
+        
+        // Désactivation boutons
+        if (counterGlobalPlayer1 >= 100 || counterGlobalPlayer2 >= 100) {
+            // Désactivation bouton HOLD
+            btnHold.setAttribute('disabled', 'disabled')
+            btnHold.removeEventListener('click', hold)
+            // Désactivation bouton ROLL
+            btnRoll.setAttribute('disabled', 'disabled')
+            btnRoll.removeEventListener('click', rollDice)
+        }
+    }
+    
+    btnHold.addEventListener('click', hold)
+
     // Tour du joueur 1
     const changeToPlayer1 = () => {
         player1Text.style.textDecoration = "underline red"
