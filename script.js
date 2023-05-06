@@ -1,6 +1,8 @@
 window.addEventListener("load", () => {
 
     // Initialisation
+    let btnNewGame = document.getElementById('btn-new-game')
+
     let roundScorePlayer1 = document.querySelector('.round-score-player-1')
     let roundScorePlayer2 = document.querySelector('.round-score-player-2')
     
@@ -20,4 +22,10 @@ window.addEventListener("load", () => {
     player1Text.style.textDecoration = "underline red"
     player2Text.style.textDecoration = "none"
     player2Text.style.opacity = 0.5
+
+    const newGame = () => {
+        window.location.reload()
+    }
+    
+    btnNewGame.addEventListener('click', newGame)
 })
