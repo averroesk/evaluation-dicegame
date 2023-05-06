@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif; 
+}
+
+.game-board {
+	height: 100vh;
+}
+
+.player-1-text,
+.player-2-text {
+	color: grey; 
+	font-size: 35px; 
+}
+
+.player-1-global-score,
+.player-2-global-score {
+	color: red;
+	font-size: 50px;
+}
+
+.player-1-round-score,
+.player-2-round-score {
+	background-color: red;
+	opacity: 0.5; 
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-bottom: 100px; 
+}
