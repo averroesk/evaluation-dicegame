@@ -14,6 +14,36 @@
 <body>
     
     <div class="container-fluid game-board">
+
+        <div class="row my-3">
+			<div class="col-md-3 d-flex align-items-center justify-content-start">
+				<!-- Ce bouton déclenche une fenêtre modale -->
+				<button 
+					type="button"
+					class="d-flex align-items-center btn btn-info text-light fw-bolder"
+					data-bs-toggle="modal"
+					data-bs-target="#exampleModal"
+					style="border-color: none; box-shadow: none; font-size: 12px">
+						<svg 
+							xmlns="http://www.w3.org/2000/svg" 
+							width="18" 
+							height="18" 
+							fill="currentColor" c
+							class="bi bi-question-circle-fill me-2" 
+							viewBox="0 0 16 16">
+								<path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0
+								.248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314
+								1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168
+								1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0
+								.25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977
+								1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75
+								2.286a.237.237 0 0 0 .241.247zm2.325 6.443c.61 0 1.029-.394 1.029-.927
+								0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94 0 .533.425.927 1.01.927z"/>
+						</svg>
+					GAME RULES
+				</button>
+			</div>
+        </div> 
         
         <div class="row gy-5" style="height: 90%">
             <div class="col-md-5 player-1 text-center d-flex flex-column align-items-center justify-content-around">
@@ -44,7 +74,59 @@
         </div>
         
   </div>
- 
+  <!-- Fenêtre modale -->
+  <div 
+        class="modal fade"
+        id="exampleModal" 
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel" 
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" 
+                        id="exampleModalLabel">
+                            Règles du jeu
+                    </h5>
+                    <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Le jeu comprend 2 joueurs sur un seul et même écran.</p>
+                    <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
+                    <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut 
+                        lancer un dé autant de fois qu'il le souhaite. Le
+                        résultat d’un lancer est ajouté au ROUND.</p>
+                    <p>Lors de son tour, le joueur peut décider à tout moment de:</p>
+                        <ul>
+                            <li>
+                                <p>Cliquer sur l’option “Hold”, qui permet d’envoyer les points du
+                                    ROUND vers le GLOBAL. Ce sera alors le
+                                    tour de l’autre joueur.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+                                    Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+                                </p>
+                            </li>
+                        </ul>
+                </div>
+                <div class="modal-footer">
+                    <button 
+                        type="button" 
+                        class="btn btn-primary" 
+                        data-bs-dismiss="modal">
+                            OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
