@@ -3,6 +3,9 @@ window.addEventListener("load", () => {
     // Initialisation
     let btnNewGame = document.getElementById('btn-new-game')
 
+    let diceScore = document.querySelector('.dice-score')
+    let iconQuestion = document.getElementById('icon-question')
+
     let roundScorePlayer1 = document.querySelector('.round-score-player-1')
     let roundScorePlayer2 = document.querySelector('.round-score-player-2')
     
@@ -22,6 +25,17 @@ window.addEventListener("load", () => {
     player1Text.style.textDecoration = "underline red"
     player2Text.style.textDecoration = "none"
     player2Text.style.opacity = 0.5
+
+    // Initialisation score dé
+    let counterDice = 0
+    
+    // Initialisation scores ROUND joueur 1 et joueur 2
+    let counterRoundPlayer1 = 0
+    let counterRoundPlayer2 = 0
+    
+    // Initialisation scores GLOBAL joueur 1 et joueur 2
+    let counterGlobalPlayer1 = 0
+    let counterGlobalPlayer2 = 0
 
     const newGame = () => {
         window.location.reload()
