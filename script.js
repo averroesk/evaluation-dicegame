@@ -162,20 +162,39 @@ window.addEventListener("load", (event) => {
         player2.style.backgroundImage = "linear-gradient(-90deg, hsl(47, 95%, 85%) 100%, #FFF 50%)"
     }
 
-    // Affichage résultat dé
+    // Affichage résultats dé
     const diceResult = (counterDice) => {
         if (counterDice == 1) {
-            diceScore.innerHTML = dice1
+            setTimeout(() => {
+                diceScore.innerHTML = dice1 }, 
+                200
+            )
+           // diceScore.innerHTML = dice1
         } else if (counterDice == 2) {
-            diceScore.innerHTML = dice2
+            setTimeout(() => {
+                diceScore.innerHTML = dice2 }, 
+                200
+            )
         } else if (counterDice == 3) {
-            diceScore.innerHTML = dice3
+            setTimeout(() => {
+                diceScore.innerHTML = dice3 }, 
+                200
+            )
         } else if (counterDice == 4) {
-            diceScore.innerHTML = dice4
+            setTimeout(() => {
+                diceScore.innerHTML = dice4 }, 
+                200
+            )
         } else if (counterDice == 5) {
-            diceScore.innerHTML = dice5
+            setTimeout(() => {
+                diceScore.innerHTML = dice5 }, 
+                200
+            )
         } else if (counterDice == 6) {
-            diceScore.innerHTML = dice6
+            setTimeout(() => {
+                diceScore.innerHTML = dice6 }, 
+                200
+            )
         }
     }
 
