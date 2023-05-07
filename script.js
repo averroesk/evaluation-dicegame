@@ -1,6 +1,36 @@
 window.addEventListener("load", () => {
 
     // Initialisation
+    let dice1 = (`<img
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-1.svg" 
+                        width="90" alt="Dice 1 icon">`)
+    let dice2 = (`<img 
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-2.svg" 
+                        width="90" 
+                        alt="Dice 2 icon">`)
+    let dice3 = (`<img 
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-3.svg" 
+                        width="90" 
+                        alt="Dice 3 icon">`)
+    let dice4 = (`<img 
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-4.svg" 
+                        width="90" 
+                        alt="Dice 4 icon">`)
+    let dice5 = (`<img 
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-5.svg" 
+                        width="90" 
+                        alt="Dice 5 icon">`)
+    let dice6 = (`<img 
+                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
+                        src="./images/dice-6.svg" 
+                        width="90" 
+                        alt="Dice 6 icon">`)
+
     let btnNewGame = document.getElementById('btn-new-game')
 
     let diceScore = document.querySelector('.dice-score')
@@ -135,40 +165,17 @@ window.addEventListener("load", () => {
     // Affichage résultat dé
     const diceResult = (counterDice) => {
         if (counterDice == 1) {
-            diceScore.innerHTML = (`<img
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-1.svg" 
-                                        width="90" alt="Dice 1 icon">`)
+            diceScore.innerHTML = dice1
         } else if (counterDice == 2) {
-            diceScore.innerHTML = (`<img 
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-2.svg" 
-                                        width="90" 
-                                        alt="Dice 2 icon">`)
+            diceScore.innerHTML = dice2
         } else if (counterDice == 3) {
-            diceScore.innerHTML = (`<img 
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-3.svg" 
-                                        width="90" 
-                                        alt="Dice 3 icon">`)
+            diceScore.innerHTML = dice3
         } else if (counterDice == 4) {
-            diceScore.innerHTML = (`<img 
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-4.svg" 
-                                        width="90" 
-                                        alt="Dice 4 icon">`)
+            diceScore.innerHTML = dice4
         } else if (counterDice == 5) {
-            diceScore.innerHTML = (`<img 
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-5.svg" 
-                                        width="90" 
-                                        alt="Dice 5 icon">`)
+            diceScore.innerHTML = dice5
         } else if (counterDice == 6) {
-            diceScore.innerHTML = (`<img 
-                                        class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                                        src="./images/dice-6.svg" 
-                                        width="90" 
-                                        alt="Dice 6 icon">`)
+            diceScore.innerHTML = dice6
         }
     }
 
