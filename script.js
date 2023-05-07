@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+window.addEventListener("load", (event) => {
 
     // Initialisation
     let dice1 = (`<img
