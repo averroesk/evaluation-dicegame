@@ -3,31 +3,31 @@ window.addEventListener("load", (event) => {
     // Initialisation
     let dice1 = (`<img
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-1.svg" 
+                        src="./images/dice-1.webp" 
                         width="90" alt="Dice 1 icon">`)
     let dice2 = (`<img 
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-2.svg" 
+                        src="./images/dice-2.webp" 
                         width="90" 
                         alt="Dice 2 icon">`)
     let dice3 = (`<img 
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-3.svg" 
+                        src="./images/dice-3.webp" 
                         width="90" 
                         alt="Dice 3 icon">`)
     let dice4 = (`<img 
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-4.svg" 
+                        src="./images/dice-4.webp" 
                         width="90" 
                         alt="Dice 4 icon">`)
     let dice5 = (`<img 
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-5.svg" 
+                        src="./images/dice-5.webp" 
                         width="90" 
                         alt="Dice 5 icon">`)
     let dice6 = (`<img 
                         class="img-fluid p-2 bg-white shadow-lg diceAnimation" 
-                        src="./images/dice-6.svg" 
+                        src="./images/dice-6.webp" 
                         width="90" 
                         alt="Dice 6 icon">`)
 
