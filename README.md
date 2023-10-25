@@ -1,7 +1,7 @@
 ### ÉVALUATION D’ENTRAÎNEMENT
 ### Dynamiser vos sites web avec Javascript.
 #### Référence : GDWFSDVSWEBAJAVAEXAIII1B_352364_20230407170303
-#### Compétence évaluée: 
+#### Compétences évaluées: 
 - Réaliser une interface utilisateur web statique et adaptable.
 - Développer une interface utilisateur web dynamique
 #### Dice game.
