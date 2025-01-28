@@ -3,33 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <title>Dice Game</title>
-        <link 
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
-            rel="stylesheet" 
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
             crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
+        <script defer src="dist/script.js"></script>
     </head>
 
     <body>
-        
+
         <div class="container-fluid game-board">
 
             <div class="row my-3">
                 <div class="col-md-3 d-flex align-items-center justify-content-start">
                     <!-- Ce bouton déclenche une fenêtre modale -->
-                    <button 
+                    <button
                         type="button"
                         class="d-flex align-items-center btn btn-info text-light fw-bolder"
                         data-bs-toggle="modal"
                         data-bs-target="#exampleModal"
                         style="border-color: none; box-shadow: none; font-size: 12px">
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="18" 
-                                height="18" 
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="18"
+                                height="18"
                                 fill="currentColor" c
-                                class="bi bi-question-circle-fill me-2" 
+                                class="bi bi-question-circle-fill me-2"
                                 viewBox="0 0 16 16">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.496 6.033h.825c.138 0
                                     .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314
@@ -44,14 +45,14 @@
                     </button>
                 </div>
                 <div class="col-md-6 align-self-start d-flex justify-content-center align-items-center">
-                    <svg 
+                    <svg
                         style="opacity: 0.8; cursor: pointer"
-                        id="btn-new-game" 
-                        xmlns="http://www.w3.org/2000/svg" 
-                        width="32" 
-                        height="32" 
-                        fill="red" 
-                        class="bi bi-plus-circle" 
+                        id="btn-new-game"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        fill="red"
+                        class="bi bi-plus-circle"
                         viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                             <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0
@@ -59,8 +60,8 @@
                     </svg>
                     <span class="text-black-50 fw-bolder fs-5 mb-0 ms-3 text-uppercase">New game</span>
                 </div>
-            </div> 
-            
+            </div>
+
             <div class="row gy-5" style="height: 90%">
                 <div class="col-md-5 player-1 text-center d-flex flex-column align-items-center justify-content-around">
                     <div>
@@ -68,64 +69,64 @@
                         <p class="player-1-global-score my-3">0</p>
                     </div>
                     <div class="mb-4 d-flex flex-column justify-content-center">
-                        <div class="py-2 px-4 text-center player-1-round-score"> 
+                        <div class="py-2 px-4 text-center player-1-round-score">
                             <p class="mb-0 round-score-text text-light fw-bold text-uppercase">Current</p>
                             <p class="mb-0 round-score-player-1 text-white fw-bold fs-3">0</p>
-                        </div> 
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 text-center d-flex flex-column align-items-center justify-content-around">
                     <div class="dice-score">
                         <div class="shadow-lg bg-white diceAnimation" style="opacity: 0.5">
-                            <img 
-                                id="icon-question" 
-                                class="img-fluid me-0" 
-                                src="./images/question-square.svg" 
-                                width="100" 
+                            <img
+                                id="icon-question"
+                                class="img-fluid me-0"
+                                src="./images/question-square.svg"
+                                width="100"
                                 alt="Question square icon">
                         </div>
                     </div>
                     <div class="d-flex flex-column align-items-center justify-content-center mt-5">
                         <div class="btn-text-roll mb-2 d-flex align-items-center">
-                            <svg 
-                                id="btn-roll" 
+                            <svg
+                                id="btn-roll"
                                 style="opacity: 0.8; cursor: pointer"
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="32" 
-                                height="32" 
-                                fill="red" 
-                                class="bi bi-arrow-repeat" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="red"
+                                class="bi bi-arrow-repeat"
                                 viewBox="0 0 16 16">
-                                    <path 
+                                    <path
                                         d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0
                                             0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25
                                             0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25
                                             0 0 0 .534 9z"/>
-                                    <path 
-                                        fill-rule="evenodd" 
+                                    <path
+                                        fill-rule="evenodd"
                                         d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002
                                             0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0
                                             8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"/>
-                            </svg>                      
+                            </svg>
                             <span class="text-black-50 fw-bolder fs-5 ms-3 text-uppercase text-roll">Roll dice</span>
                         </div>
                         <div class="btn-text-hold d-flex align-items-center mt-2">
-                            <svg 
+                            <svg
                                 style="cursor: pointer; opacity: 0.8"
                                 id="btn-hold"
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="32" 
-                                height="32" 
-                                fill="red" 
-                                class="bi bi-box-arrow-in-down" 
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="32"
+                                height="32"
+                                fill="red"
+                                class="bi bi-box-arrow-in-down"
                                 viewBox="0 0 16 16">
-                                    <path 
-                                        fill-rule="evenodd" 
+                                    <path
+                                        fill-rule="evenodd"
                                         d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5
                                             0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5
                                             1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
-                                    <path 
-                                        fill-rule="evenodd" 
+                                    <path
+                                        fill-rule="evenodd"
                                         d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5
                                             0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
                             </svg>
@@ -139,40 +140,40 @@
                         <p class="player-2-global-score my-3">0</p>
                     </div>
                     <div class="mb-4 d-flex flex-column justify-content-center">
-                        <div class="py-2 px-4 text-center player-2-round-score"> 
+                        <div class="py-2 px-4 text-center player-2-round-score">
                             <p class="mb-0 round-score-text text-light fw-bold text-uppercase">Current</p>
                             <p class="mb-0 round-score-player-2 text-white fw-bold fs-3">0</p>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
     </div>
-    
+
     <!-- Fenêtre modale -->
-    <div 
+    <div
             class="modal fade"
-            id="exampleModal" 
+            id="exampleModal"
             tabindex="-1"
-            aria-labelledby="exampleModalLabel" 
+            aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" 
+                        <h5 class="modal-title"
                             id="exampleModalLabel">
                                 Règles du jeu
                         </h5>
-                        <button 
-                            type="button" 
-                            class="btn-close" 
-                            data-bs-dismiss="modal" 
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <p>Ce jeu comprend 2 joueurs sur un seul et même écran.</p>
                         <p>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).</p>
-                        <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut 
+                        <p>À chaque tour, le joueur a son ROUND initialisé à 0 et peut
                             lancer un dé autant de fois qu'il le souhaite. Le
                             résultat d’un lancer est ajouté au ROUND.</p>
                         <p>Lors de son tour, le joueur peut décider à tout moment de:</p>
@@ -191,9 +192,9 @@
                             </ul>
                     </div>
                     <div class="modal-footer">
-                        <button 
-                            type="button" 
-                            class="btn btn-primary" 
+                        <button
+                            type="button"
+                            class="btn btn-primary"
                             data-bs-dismiss="modal">
                                 OK
                         </button>
@@ -202,10 +203,9 @@
             </div>
         </div>
 
-        <script 
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"></script>
-        <script src="script.js"></script>
     </body>
 </html>
